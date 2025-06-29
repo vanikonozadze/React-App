@@ -39,8 +39,3 @@ This is a **Single Page Application** built with **React**, fulfilling the requi
 - 🎨 SCSS (SASS preprocessor)
 - 🌍 `react-i18next` for translations
 - 💡 TypeScript (for type safety)
-
----
-
-## 📁 Folder Structure Overview
-
