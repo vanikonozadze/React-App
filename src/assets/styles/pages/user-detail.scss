@@ -1,0 +1,18 @@
+@use '../variables' as *;
+
+.user-detail {
+  max-width: 600px;
+  margin: auto;
+  padding: $section-padding;
+  background: var(--bg-color);
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin: 0.25rem 0;
+  }
+}
