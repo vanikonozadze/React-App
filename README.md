@@ -1,6 +1,9 @@
 # 🌐 React SPA – User Directory App
 
 This is a **Single Page Application** built with **React**, fulfilling the requirements of an academic or interview-based assignment. It showcases essential React features and includes bonus functionality like theming, i18n, and responsive design.
+---
+
+With 'npm run dev' we can start the application locally.
 
 ---
 
