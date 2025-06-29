@@ -1,69 +1,37 @@
-# React + TypeScript + Vite
+# 🌐 React SPA – User Directory App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a **Single Page Application** built with **React**, fulfilling the requirements of an academic or interview-based assignment. It showcases essential React features and includes bonus functionality like theming, i18n, and responsive design.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Features
 
-## Expanding the ESLint configuration
+✅ Three Pages:
+- **Home** – Welcome page with an image and description.
+- **About** – Shows app description and tracks visits using `sessionStorage`.
+- **Users** – Fetches and displays user data from an external API with user details page.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✅ Fully Functional App:
+- Data fetching via reusable **custom hooks**
+- Navigation handled via **React Router**
+- Language toggle (🇬🇪 Georgian / 🇬🇧 English)
+- Dark / Light theme support
+- Responsive layout for all screen sizes (tested via Chrome DevTools)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🛠️ Technologies Used
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- ⚛️ React (with Hooks)
+- 🔄 React Router (v6)
+- 🎣 Custom Hooks (`useFetch`)
+- 🌐 REST API: [JSONPlaceholder](https://jsonplaceholder.typicode.com/users)
+- 💾 sessionStorage & localStorage
+- 🎨 SCSS (SASS preprocessor)
+- 🌍 `react-i18next` for translations
+- 💡 TypeScript (for type safety)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📁 Folder Structure Overview
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
